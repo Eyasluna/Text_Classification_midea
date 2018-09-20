@@ -1,1 +1,5 @@
+Please refer to Facebook's fasttext doc: https://github.com/facebookresearch/fastText
+By default,the labels of all data sets are words that are prefixed by the string __label__. 
+This will output two files: model.bin and model.vec after genrated by fasttext model. 
 
+For SVM model training, please refer to comments on source code. 
