@@ -1,1 +1,4 @@
+Please refer to facebook offical fasttext for more info: https://github.com/facebookresearch/fastText.
+By default, the labels are words that are prefixed by the string __label__ for each data set. 
 
+For SVM, please see the comments on source code in SVM parts. 
