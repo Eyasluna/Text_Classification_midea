@@ -57,6 +57,7 @@ for train_set, test_set in KFOLD.split(new_data):
     #Get total precison and recall for all training results.
     Total_precision = result.precision + Total_precision
     Total_recall = result.recall + Total_recall
+    
     counter += 1
 
 print("Average precision:",Total_precision/10)
