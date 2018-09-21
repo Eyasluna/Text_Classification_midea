@@ -71,7 +71,6 @@ def splitDataset(dataset,splitRatio):
     while len(trainSet)<trainSize:
         index = random.randrange(len(copy))
         trainSet.append(copy.pop(index))
-
     return trainSet,copy
 
 #get precision and recall
