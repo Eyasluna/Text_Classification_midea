@@ -96,8 +96,8 @@ def input_data(train_file, test_file):
 with open('hlt_stop_words.txt', 'r') as f:
     stopwords = set([w.strip() for w in f])
 
-
 comma_tokenizer = lambda x: jieba.cut(x, cut_all=True)
+
 def vectorize(train_words, test_words):
     v = HashingVectorizer(tokenizer=comma_tokenizer, n_features=30000, non_negative=True)
     train_data = v.fit_transform(train_words)
