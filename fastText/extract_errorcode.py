@@ -5,6 +5,7 @@ import itertools
 
 newmodels = []
 lines = open("/Users/tikacrota/desktop/qa__ac_displaying_errorcode.txt").readlines()
+
 print ("lines is :",lines)
 
 for keys in lines:
@@ -15,9 +16,11 @@ for keys in lines:
 
 structed_keys = list(itertools.chain(*newmodels))
 newTest = set(structed_keys)
+
 print (newTest)
 
 final_error_set = set()
+
 for error in structed_keys:
     code = error.replace('|', '')
     final_error_set.add(code)
