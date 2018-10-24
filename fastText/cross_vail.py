@@ -47,6 +47,7 @@ for train_set, test_set in KFOLD.split(new_data):
     #Training model using fastText
     classifier = fasttext.supervised("train_data_"+ str(counter), "train_data_"+
                                      str(counter)+".model", label_prefix="__label__")
+    
     result = classifier.test('test_data_'+ str(counter))
 
     #Get training results
