@@ -11,6 +11,7 @@ parser.add_argument('-o', '--raw', type = str, help = 'Input the raw data set')
 parser.add_argument('-t', '--train',type = str,  help = 'Output train data set')
 parser.add_argument('-s', '--test', type = str, help = 'Output test data set')
 parser.add_argument('-r', '--rate', type = float, default = 0.7, help = 'Input the raw/test rate')
+
 args = parser.parse_args()
 # if args.raw is None or args.train is None or args.test is None:
 #     parser.print_help()
