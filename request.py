@@ -95,6 +95,7 @@ def remove_dup(input_file,output_file):
         if line not in lines_seen:  # not a duplicate
             outfile.write(line)
             lines_seen.add(line)
+
     outfile.close()
 
 
@@ -155,7 +156,6 @@ generate_tag_file('domain.txt','processed_file.txt','domain')
 generate_final_file('domain.txt','processed_file.txt','domain_output.txt')
 
 print(get_tag_type('不知道土豆焖豆角怎么做','domain'))
-#remove_dupu('test.txt','test2.txt')
 
 
 #combine_files('Corpus.txt','tuneSet.txt','combined.txt')
