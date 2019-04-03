@@ -2,6 +2,8 @@ import requests
 import re
 import itertools
 
+import numpy as np
+
 def file_process(file_name):
     input_file = file_name
     f1 = open(input_file,encoding='utf8').readlines()
@@ -61,9 +63,10 @@ def get_tag_type(utterance_name,tag_type):
                       headers=HEADERS)
     c = r.json()
     intent_type = c['intent'][tag_type]
+    c.dump()
     return intent_type
 
-processed_file = open('processed_file.txt',encoding='utf-8').readlines()
+#processed_file = open('processed_file.txt',encoding='utf-8').readlines()
 
 
 def generate_tag_file(output_file,process_file,tag_type):
@@ -152,8 +155,13 @@ def remove_space(file_name):
 
 
 # count_file_lines('second_processed_file.txt')
-generate_tag_file('domain.txt','processed_file.txt','domain')
-generate_final_file('domain.txt','processed_file.txt','domain_output.txt')
+# generate_tag_file('domain.txt','processed_file.txt','domain')
+# generate_final_file('domain.txt','processed_file.txt','domain_output.txt')
+m = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(m[1][2])
+print(m.shape)
+
+
 
 print(get_tag_type('不知道土豆焖豆角怎么做','domain'))
 
