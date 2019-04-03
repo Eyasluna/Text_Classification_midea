@@ -66,7 +66,7 @@ def get_tag_type(utterance_name,tag_type):
     c.dump()
     return intent_type
 
-#processed_file = open('processed_file.txt',encoding='utf-8').readlines()
+processed_file = open('processed_file.txt',encoding='utf-8').readlines()
 
 
 def generate_tag_file(output_file,process_file,tag_type):
@@ -126,6 +126,8 @@ def count_file_lines(file_name):
     count +=1
     print('file lines is:', count)
     return count
+
+
 
 #if __name__ == '__main__':
 
