@@ -155,12 +155,9 @@ def remove_space(file_name):
         f.writelines(lines)
 
 
-# count_file_lines('second_processed_file.txt')
-# generate_tag_file('domain.txt','processed_file.txt','domain')
-# generate_final_file('domain.txt','processed_file.txt','domain_output.txt')
-m = np.array([[1,2,3],[4,5,6],[7,8,9]])
-print(m[1][2])
-print(m.shape)
+count_file_lines('second_processed_file.txt')
+generate_tag_file('domain.txt','processed_file.txt','domain')
+generate_final_file('domain.txt','processed_file.txt','domain_output.txt')
 
 print(get_tag_type('不知道土豆焖豆角怎么做','domain'))
 
