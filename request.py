@@ -69,6 +69,7 @@ def get_tag_type(utterance_name,tag_type):
 processed_file = open('processed_file.txt',encoding='utf-8').readlines()
 
 
+
 def generate_tag_file(output_file,process_file,tag_type):
     intent = open(output_file,'w+', encoding='utf-8')
     processed_file = open(process_file, encoding='utf-8').readlines()
@@ -127,8 +128,6 @@ def count_file_lines(file_name):
     print('file lines is:', count)
     return count
 
-
-
 #if __name__ == '__main__':
 
 #split file from processed file to 6400 lines, then send to get intent func.
@@ -162,8 +161,6 @@ def remove_space(file_name):
 m = np.array([[1,2,3],[4,5,6],[7,8,9]])
 print(m[1][2])
 print(m.shape)
-
-
 
 print(get_tag_type('不知道土豆焖豆角怎么做','domain'))
 
