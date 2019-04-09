@@ -56,10 +56,6 @@ list = [
           '_guanbi_dianfure'
           ]
 
-list2 = ['rns_out_autoTest_Selected3_0035_26_du.wav',
-'rns_out_autoTest_Selected3_0036_27_du.wav',
-'rns_out_autoTest_Selected3_0037_28_du.wav',
-'rns_out_autoTest_Selected3_0038_29_du.wav']
 
 path = \
     '/Users/tikacrota/Desktop/Midea/file_process/new_test/'

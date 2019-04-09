@@ -2,8 +2,6 @@ import requests
 import re
 import itertools
 
-import numpy as np
-
 def file_process(file_name):
     input_file = file_name
     f1 = open(input_file,encoding='utf8').readlines()
@@ -160,6 +158,8 @@ generate_tag_file('domain.txt','processed_file.txt','domain')
 generate_final_file('domain.txt','processed_file.txt','domain_output.txt')
 
 print(get_tag_type('不知道土豆焖豆角怎么做','domain'))
+
+
 
 
 #combine_files('Corpus.txt','tuneSet.txt','combined.txt')
