@@ -7,26 +7,13 @@ def file_process(file_name):
     input_file = file_name
     f1 = open(input_file,encoding='utf8').readlines()
 
-    # remove_lines= []
-    # for keys in f1:
-    #     keys = keys.strip()
-    #     p = r'..-.'
-    #     pattern = re.compile(p)
-    #     remove_lines.append(pattern.findall(keys))
-    # remove_lines = set(list(itertools.chain(*remove_lines)))
-
     f2 = open(file_name, 'w+', encoding='utf-8')
+
     for line in f1:
         newline = line[4:]
         f2.write(newline )
     f2.close()
 
-    # f3 = open(file_name, 'w+', encoding='utf-8')
-    # for line in f1:
-    #     for keys in remove_lines:
-    #         line = line.replace(keys,'')
-    #     f3.write(line)
-    # f3.close()
 
 def add_name(file_path):
     names = os.listdir(file_path)
