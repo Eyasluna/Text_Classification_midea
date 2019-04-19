@@ -1,9 +1,12 @@
+#coding=utf-8
+#author: Yibo Fu @midea
+#4/12/2019
+
 import re
 import itertools
 import os
 
 def file_process(file_name):
-
     input_file = file_name
     f1 = open(input_file,encoding='utf8').readlines()
 

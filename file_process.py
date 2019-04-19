@@ -68,7 +68,7 @@ files = [s.rstrip() for s in file]
 #     new_name = name.replace(name , name[:-4] + ele+'.wav')
 #     print(new_name)
 #     os.renames(os.path.join(path,name),os.path.join(path,new_name))
-#
+
 
 
 
