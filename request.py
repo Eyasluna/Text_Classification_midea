@@ -1,3 +1,7 @@
+# _*_coding:utf-8 _*_
+#author: Yibo Fu @midea
+#2/12/2019
+
 import requests
 import re
 import itertools
@@ -53,11 +57,15 @@ def get_tag_type(utterance_name,tag_type):
            "userGroup": "nlp",
            "userGroupCredential": "11c19213-25ef-46d8-b863-e7603c7aa00e"}
 
-    HEADERS = {"User-Agent": "python-requests/2.18.4", "Accept-Encoding": "gzip, deflate",
-               "Accept": "*/*", "Connection": "keep-alive", "Content-Length": "86",
+    HEADERS = {"User-Agent": "python-requests/2.18.4", "Accept-Encoding":
+        "gzip, deflate",
+               "Accept": "*/*", "Connection": "keep-alive", "Content-Length":
+                   "86",
                "Content-Type": "application/json"}
 
-    r = requests.post('http://10.3.225.144:8888/three_scenarios/nlp/listen/session', json=out,
+    r = requests.post('http://10.3.225.144:8888/three_scenarios'
+                      '/nlp/listen/session',
+                      json=out,
                       headers=HEADERS)
     c = r.json()
     intent_type = c['intent'][tag_type]
