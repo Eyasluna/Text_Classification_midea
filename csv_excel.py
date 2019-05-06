@@ -5,9 +5,10 @@
 import csv
 import re
 import itertools
+import xlrd
 
 
-def csv_process(input_file,row_name,output_file):
+def read_from_csv(input_file,row_name,output_file):
     with open(input_file,'r',encoding='utf-8') as f1:
         reader = csv.DictReader(f1)
         column = [row[row_name]for row in reader]
@@ -44,7 +45,24 @@ def file_process(file_name):
         if len(lines) > 14:
             f2.write(lines.lstrip())
 
-#csv_process('dialogueText_301.csv','text','result3.txt')
-file_process('result.txt')
+# worksheet = xlrd.open_workbook('form2.xlsx')
+# sheet_names = worksheet.sheet_names()
+# for sheet_name in sheet_names:
+#     sheet2 =worksheet.sheet_by_name(sheet_name)
+#     rows = sheet2.row_values(1)
+#     print(rows)
 
-print(len('roger that :)'))
+def read_from_excel(excel_file_path):
+    wb = xlrd.open_workbook(excel_file_path)
+    sheet = wb.sheet_by_index(0)
+    sheet.cell_value(0, 0)
+    file = open(excel_file_path,'w+',encoding='utf-8')
+
+    for i in range(sheet.nrows):
+        file.write(sheet.cell_value(i,1)+'\n')
+        print(sheet.cell_value(i, 1))
+    file.close()
+#csv_process('dialogueText_301.csv','text','result3.txt')
+#file_process('result.txt')
+
+print('OH CCCP')
