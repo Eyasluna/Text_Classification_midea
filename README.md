@@ -8,4 +8,5 @@ The bayes_classifier.py used the Naive Bayes Classifier which supposes all featu
 
 Both SVM and bayes implement Jieba as the Chinese tokenizer since the scikit-learn doesn't support Chinese. 
 
+LAB 
 
